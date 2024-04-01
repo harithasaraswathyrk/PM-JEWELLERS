@@ -1,30 +1,30 @@
-import React, {useState} from "react";
+import React from "react";
 import OverlayLoader from "../../../../common/components/Loaders/OverlayLoader";
 import useUserCart from "../../../../common/hooks/cart/useUserCart";
-import {Col, Row, Button, Alert, Input, Form} from "reactstrap";
+import {Col, Row, Button, Alert} from "reactstrap";
 import {useNavigate} from "react-router-dom";
 import {useDispatch} from "react-redux";
 import CartItemCard from "../../../../common/components/Cards/CartItemCard";
 import {Link} from "react-router-dom";
-import {applyCoupon, clearCart} from "../../../../features/cart/cartServices";
-import pushNotification from "../../../../common/components/Shared/Notification";
+import {clearCart} from "../../../../features/cart/cartServices";
+// import pushNotification from "../../../../common/components/Shared/Notification";
 const CartItemsSection = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const {userCart, isMutation} = useUserCart();
   //HANDLE_COUPON
-  const [couponCode, setCouponCode] = useState("");
-  const [productId, setProductId] = useState("");
-  const handleApplyCoupon = (e) => {
-    e.preventDefault();
-    if (!couponCode || !productId) {
-      pushNotification("Please enter a coupon code and product Id", "error");
-    } else {
-      dispatch(applyCoupon({productId, couponCode}));
-    }
-    setCouponCode("");
-    setProductId("");
-  };
+  // const [couponCode, setCouponCode] = useState("");
+  // const [productId, setProductId] = useState("");
+  // const handleApplyCoupon = (e) => {
+  //   e.preventDefault();
+  //   if (!couponCode || !productId) {
+  //     pushNotification("Please enter a coupon code and product Id", "error");
+  //   } else {
+  //     dispatch(applyCoupon({productId, couponCode}));
+  //   }
+  //   setCouponCode("");
+  //   setProductId("");
+  // };
 
   return (
     <>
@@ -57,9 +57,9 @@ const CartItemsSection = () => {
             {userCart.cart?.totalPrice > 0 && (
               <Row md={2} xs={1} className={"my-4"}>
                 <Col>
-                  <h3 className="mb-3">Apply Coupon</h3>
+                  {/* <h3 className="mb-3">Apply Coupon</h3> */}
                   {/* Apply_Coupon */}
-                  <Form
+                  {/* <Form
                     className="d-flex flex-column gap-3"
                     onSubmit={handleApplyCoupon}
                   >
@@ -80,7 +80,7 @@ const CartItemsSection = () => {
                     <Button type="submit" color="info" size="sm">
                       Apply Coupon
                     </Button>
-                  </Form>
+                  </Form> */}
                 </Col>
                 <Col>
                   <div className="bg-light p-3 rounded d-flex flex-column gap-3">
@@ -97,31 +97,31 @@ const CartItemsSection = () => {
                           : "black",
                       }}
                     >
-                      Cart Subtotal: $ {userCart.cart?.totalPrice}
+                      Total: ₹{userCart.cart?.totalPrice}
                     </p>
                     {userCart.cart?.totalPriceAfterCouponDiscount > 0 && (
                       <p style={{color: "red", fontFamily: "sans-serif"}}>
-                        Cart Subtotal After Discount: ${" "}
+                        Cart Subtotal After Discount: ₹{" "}
                         {userCart.cart?.totalPriceAfterCouponDiscount}
                       </p>
                     )}
 
                     {/* Checkout */}
-                    <Button
+                    {/* <Button
                       block
                       size="sm"
                       color="dark"
                       onClick={() => navigate("/checkout")}
                     >
                       Checkout
-                    </Button>
+                    </Button> */}
                     <Button
                       block
                       size="sm"
                       color="primary"
                       onClick={() => navigate("/shop")}
                     >
-                      Continuo Shopping
+                      Continue Shopping
                     </Button>
 
                     {/* ClearCart */}
@@ -131,7 +131,7 @@ const CartItemsSection = () => {
                       color="danger"
                       onClick={() => dispatch(clearCart())}
                     >
-                      Clear Cart
+                      Clear Wishlist
                     </Button>
                   </div>
                 </Col>
@@ -140,7 +140,7 @@ const CartItemsSection = () => {
           </>
         ) : (
           <Alert color="info">
-            Your Cart Is Empty, <Link to={"/shop"}>Continue Shopping</Link>
+            Your Wishlist Is Empty, <Link to={"/shop"}>Continue Shopping</Link>
           </Alert>
         )}
       </section>

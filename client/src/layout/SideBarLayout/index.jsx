@@ -1,8 +1,8 @@
 import React from "react";
 import {Col, Container, Row} from "reactstrap";
 import {CgProfile} from "react-icons/cg";
-import {AiFillHeart} from "react-icons/ai";
-import {FaBoxes} from "react-icons/fa";
+// import {AiFillHeart} from "react-icons/ai";
+// import {FaBoxes} from "react-icons/fa";
 import {FiLogOut} from "react-icons/fi";
 import SidebarLink from "../../common/components/Shared/SidebarLink";
 import {useDispatch} from "react-redux";
@@ -21,12 +21,12 @@ const SideBarLayout = ({children}) => {
               name={"Profile"}
               linkUrl={"/profile"}
             />
-            <SidebarLink Icon={FaBoxes} name={"Orders"} linkUrl={"/orders"} />
-            <SidebarLink
+            {/* <SidebarLink Icon={FaBoxes} name={"Orders"} linkUrl={"/orders"} /> */}
+            {/* <SidebarLink
               Icon={AiFillHeart}
               name={"Wishlist"}
               linkUrl={"/wishlist"}
-            />
+            /> */}
             <SidebarLink
               Icon={FiLogOut}
               name={"Logout"}

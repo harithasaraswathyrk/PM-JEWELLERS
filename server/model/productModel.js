@@ -24,7 +24,7 @@ const productSchema = new mongoose.Schema(
     price: {
       type: Number,
       required: [true, "Product must have a price"],
-      max: [1000000, "Product price is very high"],
+      max: [10000000000000, "Product price is very high"],
     },
     discount: {
       type: Number,

@@ -42,9 +42,9 @@ const ShopSideBar = ({
           onChange={(e) => setPriceVal(e.target.value)}
           onAfterChange={(e) => handlePrice(e.target.value)}
           min={0}
-          max={4000}
+          max={800000}
           tooltip="on"
-          tooltipLabel={(currentValue) => `${currentValue} $`}
+          tooltipLabel={(currentValue) => `${currentValue} ₹`}
           tooltipPlacement="top"
           step={50}
         />

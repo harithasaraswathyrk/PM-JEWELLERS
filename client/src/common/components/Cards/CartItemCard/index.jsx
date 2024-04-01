@@ -108,7 +108,7 @@ const CartItemCard = ({item: {color, price, product, quantity, size, _id}}) => {
           )}
         </Col>
         <Col className="text-center">
-          {price && <span style={{color: "red"}}>$ {price}</span>}
+          {price && <span style={{color: "red"}}> ₹{price}</span>}
         </Col>
       </Row>
     </div>

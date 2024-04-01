@@ -32,7 +32,7 @@ const Header = () => {
         <div className="navbar py-2">
           {/* Logo */}
           <LinkContainer style={{cursor: "pointer"}} to={"/"}>
-            <img src={logo} alt="Logo" width={50} height={50} />
+            <img src={logo} alt="Logo" width={80} height={50} />
           </LinkContainer>
 
           {/* Navbar */}

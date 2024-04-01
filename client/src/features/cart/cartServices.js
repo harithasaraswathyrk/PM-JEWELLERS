@@ -31,7 +31,7 @@ export const addToCart = createAsyncThunk(
   async (body, {rejectWithValue}) => {
     try {
       const res = await usePostData("/cart", body);
-      pushNotification("Product Added Successfully To Your Cart", "success");
+      pushNotification("Product Added Successfully To Your Wishlist", "success");
       return res;
     } catch (error) {
       // console.log(error);
@@ -60,7 +60,7 @@ export const removeFromCart = createAsyncThunk(
   async (cartItemId, {rejectWithValue}) => {
     try {
       const res = await useDeleteData(`/cart/${cartItemId}`);
-      pushNotification("Cart Item Deleted Successfully", "success");
+      pushNotification("Wishlist Item Deleted Successfully", "success");
       // console.log(res);
       return res;
     } catch (error) {
@@ -89,7 +89,7 @@ export const updateCartItemQty = createAsyncThunk(
   async ({cartItemId, quantity}, {rejectWithValue}) => {
     try {
       const res = await useUpdateData(`/cart/${cartItemId}`, {quantity});
-      pushNotification("Cart Item Updated Successfully", "success");
+      pushNotification("Wishlist Item Updated Successfully", "success");
       // console.log(res);
       return res;
     } catch (error) {
@@ -118,7 +118,7 @@ export const clearCart = createAsyncThunk(
   async (_, {rejectWithValue}) => {
     try {
       const res = await useDeleteData(`/cart`);
-      pushNotification("Cart Cleared Successfully", "success");
+      pushNotification("Wishlist Cleared Successfully", "success");
       // console.log(res);
       return res;
     } catch (error) {

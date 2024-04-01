@@ -1,0 +1,29 @@
+.gold-silver-section {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.gold-silver-section h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+.button-container {
+  margin-top: 10px; /* Adjust this value as needed */
+}
+
+.gold-silver-section button {
+  margin-right: 10px; /* Add margin between buttons */
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #db8e6f;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.gold-silver-section button:hover {
+  background-color: #0c0c0c;
+}

@@ -1,12 +1,12 @@
 import React, {useState} from "react";
 import {MdDelete} from "react-icons/md";
 import {Link} from "react-router-dom";
-import {Alert, Badge, Spinner, Table, UncontrolledTooltip} from "reactstrap";
+import {Alert, Badge, UncontrolledTooltip} from "reactstrap";
 import DashboardHead from "../../../common/components/Heads/DashboardHead";
 import OverlayLoader from "../../../common/components/Loaders/OverlayLoader";
 import PageHelmet from "../../../common/components/Shared/PageHelmet";
 import PaginateTable from "../../../common/components/Shared/PaginateTable";
-import Pagination from "../../../common/components/Shared/Pagination";
+// import Pagination from "../../../common/components/Shared/Pagination";
 import useGetOrders from "../../../common/hooks/orders/useGetOrders";
 import useMutateOrders from "../../../common/hooks/orders/useMutateOrders";
 import DashboardLayout from "../../../layout/DashboardLayout";

@@ -12,7 +12,7 @@ const Cart = () => {
         <PageBreadcrumbs
           pages={[
             {page: "Home", link: "/"},
-            {page: "Cart", isActive: true},
+            {page: "Wishlist", isActive: true},
           ]}
         />
         <CartItemsSection />

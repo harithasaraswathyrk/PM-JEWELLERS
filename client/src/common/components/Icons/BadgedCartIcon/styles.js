@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const CartIcon = styled.div`
+export const HeartIcon = styled.div`
   position: relative;
   .badge-num {
     position: absolute;

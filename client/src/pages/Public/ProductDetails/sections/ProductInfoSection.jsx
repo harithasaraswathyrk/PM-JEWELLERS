@@ -10,13 +10,12 @@ import {
   ListGroup,
   ListGroupItem,
   Row,
-  Spinner,
-  UncontrolledTooltip,
+  Spinner
 } from "reactstrap";
 import BlockLoader from "../../../../common/components/Loaders/BlockLoader";
 import ProductDetailsCarousel from "../../../../common/components/Carousel/ProductDetailsCarousel";
-import {AiOutlineHeart, AiFillHeart} from "react-icons/ai";
-import useWishlist from "../../../../common/hooks/wishlist/useWishlist";
+// import {AiOutlineHeart, AiFillHeart} from "react-icons/ai";
+// import useWishlist from "../../../../common/hooks/wishlist/useWishlist";
 import RatingStars from "../../../../common/components/Shared/RatingStars";
 import ProductsTabbedSection from "./ProductsTabbedSection";
 import ProductsInSameCategorySection from "./ProductsInSameCategorySection";
@@ -32,13 +31,13 @@ const ProductInfoSection = () => {
   }, [productId, dispatch]);
   const {productDetails} = useSelector((state) => state.products);
   //WISHLIST
-  const {
-    userWishList,
-    isMutation,
-    isLoggedIn,
-    handleRemoveFromWishlist,
-    handleAddToWishlist,
-  } = useWishlist();
+  // const {
+  //   userWishList,
+  //   isMutation,
+  //   isLoggedIn,
+  //   handleRemoveFromWishlist,
+  //   handleAddToWishlist,
+  // } = useWishlist();
   //ADD_TO_CART
   const {
     colorIdx,
@@ -82,7 +81,7 @@ const ProductInfoSection = () => {
                 <ListGroupItem>
                   <div className="name-wish-container d-flex align-items-center justify-content-between">
                     <h3 className="m-0">{productDetails?.product?.name}</h3>
-                    {!isLoggedIn ? (
+                    {/* {!isLoggedIn ? (
                       <>
                         <AiOutlineHeart size={30} id="ScheduleUpdateTooltip" />
                         <UncontrolledTooltip
@@ -112,7 +111,7 @@ const ProductInfoSection = () => {
                           handleRemoveFromWishlist(productDetails?.product?._id)
                         }
                       />
-                    )}
+                    )} */}
                   </div>
                 </ListGroupItem>
                 {/* Id */}
@@ -156,13 +155,14 @@ const ProductInfoSection = () => {
                 {/* Price - Discount */}
                 <ListGroupItem>
                   <span style={{color: "#ff6262"}}>
-                    $
+                    ₹
                     {productDetails?.product?.price -
                       productDetails?.product?.discount}
                   </span>{" "}
                   {productDetails?.product?.discount > 0 && (
                     <span className="text-muted text-decoration-line-through">
-                      ${productDetails?.product?.price}
+                      ₹
+                    {productDetails?.product?.price}
                     </span>
                   )}
                 </ListGroupItem>
@@ -296,7 +296,7 @@ const ProductInfoSection = () => {
                               className="w-100"
                               onClick={handleAddToCart}
                             >
-                              Add To Cart
+                              Add To Wishlist
                             </Button>
                           )}
                         </Col>

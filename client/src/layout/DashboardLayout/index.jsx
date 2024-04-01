@@ -4,10 +4,10 @@ import SidebarLink from "../../common/components/Shared/SidebarLink";
 import {useDispatch} from "react-redux";
 import {logout} from "../../features/user/userSlice";
 import Sidebar from "../../common/components/Shared/Sidebar";
-import {RiCoupon2Fill} from "react-icons/ri";
-import {FaBoxes} from "react-icons/fa";
+// import {RiCoupon2Fill} from "react-icons/ri";
+//import {FaBoxes} from "react-icons/fa";
 import {
-  MdApps,
+  //MdApps,
   MdAddPhotoAlternate,
   MdWidgets,
   MdPeopleAlt,
@@ -32,16 +32,16 @@ const DashboardLayout = ({children}) => {
               name={"Users"}
               linkUrl={"/admin/users"}
             />
-            <SidebarLink
+            {/* <SidebarLink
               Icon={FaBoxes}
               name={"Orders"}
               linkUrl={"/admin/orders"}
-            />
-            <SidebarLink
+            /> */}
+            {/* <SidebarLink
               Icon={RiCoupon2Fill}
               name={"Coupons"}
               linkUrl={"/admin/coupons"}
-            />
+            /> */}
             <SidebarLink
               Icon={MdWidgets}
               name={"Categories"}
