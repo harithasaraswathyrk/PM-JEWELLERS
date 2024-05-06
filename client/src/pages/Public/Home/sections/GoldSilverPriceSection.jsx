@@ -7,7 +7,7 @@ const GoldSilverPriceSection = () => {
   };
 
   const handleSilverCheckPrice = () => {
-    window.open("https://www.moneycontrol.com/commodity/silver-price.html", "_blank");
+    window.open("https://economictimes.indiatimes.com/commoditysummary/symbol-SILVER.cms", "_blank");
   };
 
   return (
