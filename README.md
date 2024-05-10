@@ -11,7 +11,7 @@ Ecommerce website has full CRUD operations of products, categories, orders, user
 - Mongoose
 - JsonWebToken
 - Express Validator
-and much more ...
+and much more ....
 
 ## Featuers
 - Good folders structure
@@ -28,7 +28,7 @@ and much more ...
 [API reference](https://documenter.getpostman.com/view/22360984/2s93Jut2tg)
 
 ## ENV
-To run this project, you will need to add the following environment variables to your .env file
+To run this project, you will need to add the following environment variables to your .env file.
 
 `PORT`
 `NODE_ENV`
